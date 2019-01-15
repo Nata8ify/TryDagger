@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "222455283772",
+    "firebase_url": "https://akexorcistdagger.firebaseio.com",
+    "project_id": "akexorcistdagger",
+    "storage_bucket": "akexorcistdagger.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:222455283772:android:ab170238548d48b8",
+        "android_client_info": {
+          "package_name": "com.n8ify.mdev.akexorcistdagger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "222455283772-115f215mrc6tsqvner709anptrjdtbam.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.n8ify.mdev.akexorcistdagger",
+            "certificate_hash": "618c2e47e4190ef609d31500a7323ed3a4f95c75"
+          }
+        },
+        {
+          "client_id": "222455283772-pdnbsd50l9mcpjk4bnq57tcnm6hr53fk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0dAufA0G6vQ_sdShNtXtjww2yllJcpfQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "222455283772-pdnbsd50l9mcpjk4bnq57tcnm6hr53fk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
