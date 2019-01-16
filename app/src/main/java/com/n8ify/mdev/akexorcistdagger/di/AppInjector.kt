@@ -13,6 +13,8 @@ import dagger.android.AndroidInjection
 import dagger.android.support.AndroidSupportInjection
 import dagger.android.support.HasSupportFragmentInjector
 
+
+/* Note : This 'AppInjector' will listening for 'onCreated' state of activity to do 'AndroidInjection.inject(..)' or make DI on those activity. */
 object AppInjector {
     fun init(baseApplication: BaseApplication) {
         DaggerApplicationComponent.builder().bindBaseApplication(baseApplication).build().inject(baseApplication)
@@ -46,7 +48,7 @@ object AppInjector {
     fun handleInjection(activity: Activity?) {
         when (activity) {
             is HasSupportFragmentInjector -> {
-                println("Inject Act!")
+                println("Inject Acted!")
                 AndroidInjection.inject(activity)
             }
             is FragmentActivity -> {

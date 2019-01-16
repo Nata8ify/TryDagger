@@ -9,7 +9,10 @@ import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
 import javax.inject.Inject
-
+/* DI Step :
+ * 1. Do 'onCreate' and call for 'AppInjector.init(..)' which implement an injection logic and require 'BaseApplication''s instance for make a binding instance (In this circumstance just want 'BaseApplication' to make an injectable 'SharedPreferences').
+ * 2. Implement 'HasActivityInjector' to told dagger there are activity under this application to be injected via '@ContributesAndroidInjector'.
+*/
 class BaseApplication : Application(), HasActivityInjector {
 
     override fun onCreate() {
