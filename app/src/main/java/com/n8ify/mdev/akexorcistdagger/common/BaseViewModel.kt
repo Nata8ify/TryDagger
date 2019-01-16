@@ -22,6 +22,7 @@ abstract class BaseViewModel : ViewModel() {
             is CommentViewModel -> {
                 this@BaseViewModel.injector.inject(this as CommentViewModel)
             }
+            // TODO : Add more view model which want to be injected here.
         }
 
 
