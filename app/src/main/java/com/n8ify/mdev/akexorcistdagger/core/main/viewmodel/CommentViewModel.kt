@@ -6,7 +6,7 @@ import com.n8ify.mdev.akexorcistdagger.data.model.Comment
 import io.reactivex.Single
 import javax.inject.Inject
 
-class MainViewModel : BaseViewModel() {
+class CommentViewModel : BaseViewModel() {
 
     @Inject
     lateinit var commentAPI: CommentAPI

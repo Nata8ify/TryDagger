@@ -1,7 +1,7 @@
 package com.n8ify.mdev.akexorcistdagger.common
 
 import android.arch.lifecycle.ViewModel
-import com.n8ify.mdev.akexorcistdagger.core.main.viewmodel.MainViewModel
+import com.n8ify.mdev.akexorcistdagger.core.main.viewmodel.CommentViewModel
 import com.n8ify.mdev.akexorcistdagger.di.component.DaggerViewModelInjectorComponent
 import com.n8ify.mdev.akexorcistdagger.di.component.ViewModelInjectorComponent
 import com.n8ify.mdev.akexorcistdagger.util.RxSchedulerProvider
@@ -19,8 +19,8 @@ abstract class BaseViewModel : ViewModel() {
 
     private fun inject() {
         when(this){
-            is MainViewModel -> {
-                this@BaseViewModel.injector.inject(this as MainViewModel)
+            is CommentViewModel -> {
+                this@BaseViewModel.injector.inject(this as CommentViewModel)
             }
         }
 

@@ -11,7 +11,7 @@ abstract class ActivityBuilder {
 
     /* Note : 'MainActivity' can access instance which is provided by 'ApplicationModule' (and another module) now. */
     /* Important! : Contributing to its target super class may not function as well, contribute to the target activity directly is highly recommended. */
-    @ContributesAndroidInjector()
+    @ContributesAndroidInjector(modules = [FragmentBuilder::class])
     abstract fun contributeMainActivity(): MainActivity
 
 }

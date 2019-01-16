@@ -17,7 +17,6 @@ class BaseApplication : Application(), HasActivityInjector {
         AppInjector.init(this@BaseApplication)
     }
 
-
     /* Note > : Tell a dagger to know there activity(s) to inject */
     @Inject
     lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Activity>

@@ -11,6 +11,7 @@ import com.n8ify.mdev.akexorcistdagger.common.BaseApplication
 import com.n8ify.mdev.akexorcistdagger.di.component.DaggerApplicationComponent
 import dagger.android.AndroidInjection
 import dagger.android.support.AndroidSupportInjection
+import dagger.android.support.HasSupportFragmentInjector
 
 object AppInjector {
     fun init(baseApplication: BaseApplication) {
@@ -44,7 +45,7 @@ object AppInjector {
     /* Note : This method will determinate how the android component will be injected. */
     fun handleInjection(activity: Activity?) {
         when (activity) {
-            is BaseActivity -> {
+            is HasSupportFragmentInjector -> {
                 println("Inject Act!")
                 AndroidInjection.inject(activity)
             }
