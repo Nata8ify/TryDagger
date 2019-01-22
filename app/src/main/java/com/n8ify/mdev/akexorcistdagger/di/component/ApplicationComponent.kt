@@ -6,12 +6,13 @@ import com.n8ify.mdev.akexorcistdagger.di.module.ApplicationModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.support.AndroidSupportInjectionModule
+import th.or.gsb.corporate.di.module.SomethingModule
 import javax.inject.Singleton
 
 /* Note : To make AndroidInjection.inject(..) and AndroidSupportInjection.inject() to function
  * 'AndroidSupportInjectionModule::class', 'AndroidInjectionModule::class' must be included. */
 @Singleton
-@Component(modules = [AndroidSupportInjectionModule::class, ApplicationModule::class, ActivityBuilder::class])
+@Component(modules = [AndroidSupportInjectionModule::class, ApplicationModule::class, ActivityBuilder::class, SomethingModule::class])
 interface ApplicationComponent {
 
     /* Note : Target inject here... */

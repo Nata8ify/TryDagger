@@ -5,6 +5,7 @@ import android.app.Application
 import android.content.Context
 import android.support.multidex.MultiDex
 import com.n8ify.mdev.akexorcistdagger.di.AppInjector
+import com.n8ify.mdev.akexorcistdagger.di.module.Something
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
@@ -15,15 +16,18 @@ import javax.inject.Inject
 */
 class BaseApplication : Application(), HasActivityInjector {
 
+    @Inject
+    lateinit var something: Something
+
     override fun onCreate() {
         super.onCreate()
         AppInjector.init(this@BaseApplication)
+        something.prettyDararai()
     }
 
     /* Note > : Tell a dagger to know there activity(s) to inject */
     @Inject
     lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Activity>
-
     override fun activityInjector(): AndroidInjector<Activity> {
         return dispatchingAndroidInjector
     }

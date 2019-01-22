@@ -2,6 +2,7 @@ package com.n8ify.mdev.akexorcistdagger.di.module
 
 import com.n8ify.mdev.akexorcistdagger.common.Const
 import com.n8ify.mdev.akexorcistdagger.data.api.CommentAPI
+import com.n8ify.mdev.akexorcistdagger.util.DecryptionInterceptor
 import com.n8ify.mdev.akexorcistdagger.util.RxSchedulerProvider
 import dagger.Module
 import dagger.Provides
@@ -18,6 +19,7 @@ class APIsModule {
     @Singleton
     fun provideRetrofit(): Retrofit {
         val okHttpClient = OkHttpClient.Builder()
+            .addInterceptor(DecryptionInterceptor())
             .addInterceptor(HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BODY })
             .build()
         return Retrofit.Builder()
